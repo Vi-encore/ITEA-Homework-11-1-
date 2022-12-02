@@ -8,6 +8,8 @@ function alertInfo() {
 
   if (!Number(age)) {
     alert(`Enter correct age value(number)`);
+  } else if (Number(name) || Number(surname)) {
+    alert(`Enter correct data(name or surname)`);
   } else {
     alert(`Вас звуть ${name} ${surname}, Вам ${age} роки(-ів).`);
   }
