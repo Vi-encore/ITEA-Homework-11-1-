@@ -3,12 +3,16 @@
 //Далі, залежно від вибору користувача, виводиться модальне вікно з інформацією true або false.
 
 function isAge() {
-  let age = prompt(`Скільки Вам років?`);
-  let submitAge = confirm(`Вам ${age} роки(-ів)?`);
-  if (!submitAge) {
-    alert(`Вам НЕ ${age} роки(-ів)!!! 😢`); //false
+  let age = +prompt(`Скільки Вам років?`);
+  if (!Number(age)) {
+    alert(`Enter correct age value (number)`);
   } else {
-    alert(`Вам ${age} роки(-ів) 😄`); //true
+    let submitAge = confirm(`Вам ${age} роки(-ів)?`);
+    if (!submitAge) {
+      alert(`Вам НЕ ${age} роки(-ів)!!! 😢`); //false
+    } else {
+      alert(`Вам ${age} роки(-ів) 😄`); //true
+    }
   }
 }
 

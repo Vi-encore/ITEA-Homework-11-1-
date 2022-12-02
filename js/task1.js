@@ -8,17 +8,21 @@
 //=> "y = 4x + 1"
 
 function equation() {
-  let y1 = prompt(`Введіть у-координату першої точки`);
-  let x1 = prompt(`Введіть х-координату першої точки`);
-  let y2 = prompt(`Введіть у-координату другої точки`);
-  let x2 = prompt(`Введіть х-координату другої точки`);
+  let y1 = +prompt(`Введіть у-координату першої точки`);
+  let x1 = +prompt(`Введіть х-координату першої точки`);
+  let y2 = +prompt(`Введіть у-координату другої точки`);
+  let x2 = +prompt(`Введіть х-координату другої точки`);
 
-  let k = (y1 - y2) / (x1 - x2);
+  if (!Number(y1) || !Number(x1) || !Number(y2) || !Number(x2)) {
+    alert(`Enter correct data(number)`);
+  } else {
+    let k = (y1 - y2) / (x1 - x2);
 
-  let b = y2 - k * x2;
+    let b = y2 - k * x2;
 
-  let y = `${k}x + ${b}`;
-  alert(y);
+    let y = `${k}x + ${b}`;
+    alert(y);
+  }
 }
 
 equation();
